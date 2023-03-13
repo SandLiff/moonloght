@@ -2,6 +2,46 @@
 
 @charset "UTF-8";
 
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-tiktok:before {
+  content: "\e900";
+}
+
+._icon-discord:before {
+  content: "\e901";
+  color: #7289da;
+}
+
+._icon-instagram:before {
+  content: "\ea92";
+}
+
+._icon-youtube:before {
+  content: "\ea9d";
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -157,6 +197,7 @@ body::after {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+  z-index: 2000;
 }
 
 .popup_show {
@@ -164,7 +205,7 @@ body::after {
   visibility: visible;
   overflow: auto;
   pointer-events: auto;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .popup_show .popup__content {
@@ -330,9 +371,6 @@ section::before {
   bottom: 0;
   width: 100%;
   height: 100px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#1c0522), to(transparent));
-  background: -o-linear-gradient(bottom, #1c0522, transparent);
-  background: linear-gradient(to top, #1c0522, transparent);
   z-index: 1000;
 }
 
@@ -362,8 +400,20 @@ section img#mountains_front {
   overflow: hidden;
 }
 
-.page__about {
+.page__why {
   width: 100%;
+  height: 100vh;
+}
+
+.page__about {
+  height: 100vh;
+}
+
+.page__team {
+  height: 100vh;
+}
+
+.page__contact {
   height: 100vh;
 }
 
@@ -458,7 +508,7 @@ section img#mountains_front {
   margin-top: 1.25rem;
 }
 
-.about__container {
+.why__container {
   padding-top: 10.625rem;
   padding-bottom: 10.625rem;
   display: -webkit-box;
@@ -477,25 +527,180 @@ section img#mountains_front {
   text-align: center;
 }
 
-.about__title {
+.why__title {
   font-size: 4.5rem;
   font-weight: 700;
   margin-bottom: 3.4375rem;
   text-align: center;
 }
 
-.about__text {
+.why__text {
   text-align: center;
   max-width: 75rem;
 }
 
-.about__text p {
+.why__text p {
   text-align: center;
+  line-height: 1.2;
+}
+
+.why__text p:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+
+.about__container {
+  padding-top: 10.625rem;
+  padding-bottom: 10.625rem;
+}
+
+.about__title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.about__text {
+  text-align: center;
+}
+
+.about__text p {
   line-height: 1.2;
 }
 
 .about__text p:not(:last-child) {
   margin-bottom: 1.5625rem;
+}
+
+.team__container {
+  padding-top: 10.625rem;
+  padding-bottom: 10.625rem;
+}
+
+.team__title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.team__text {
+  text-align: center;
+}
+
+.team__text p {
+  line-height: 1.2;
+}
+
+.team__text p:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+
+.contact__container {
+  padding-top: 10.625rem;
+  padding-bottom: 10.625rem;
+}
+
+.contact__title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 3.4375rem;
+  text-align: center;
+}
+
+.contact__text {
+  margin-bottom: 1.875rem;
+  text-align: center;
+}
+
+.contact__text p {
+  line-height: 1.2;
+}
+
+.contact__text p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.contact__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5625rem;
+}
+
+.contact__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #1e2124;
+  gap: 1.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 14px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contact__button:hover {
+  background-color: #14406d;
+}
+
+._icon-instagram {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+._icon-instagram:hover {
+  color: #ff9100;
+}
+
+._icon-youtube {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+._icon-youtube:hover {
+  color: #ff0000;
+}
+
+._icon-tiktok {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+._icon-tiktok:hover {
+  color: #160afa;
 }
 
 @media (max-width: 47.99875em) {
