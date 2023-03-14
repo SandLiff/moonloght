@@ -36,32 +36,24 @@
 		</header>
 
 		<main class="page">
+			<div class="page__blur"></div>
 			<section class="page__main main-block">
 				<div class="main-block__container">
-					<picture><source srcset="img/stars.webp" type="image/webp"><img data-prlx-mouse id="stars" src="img/stars.png" alt="" /></picture>
-					<picture><source srcset="img/moon.webp" type="image/webp"><img id="moon" src="img/moon.png" alt="" /></picture>
-					<picture><source srcset="img/mountains_behind.webp" type="image/webp"><img id="mountains_behind" src="img/mountains_behind.png" alt="" /></picture>
+					<picture><source srcset="img/mountains_behind.webp" type="image/webp"><img class="main-block__blur" id="mountains_behind" src="img/mountains_behind.png" alt="" /></picture>
+					<div class="main-block__login login">
+						<h2 class="login__title">Login</h2>
+						<form action="#" class="login__form">
+							<div class="login__item">
+								<input type="text" name="email" placeholder="Email" class="login__input" />
+							</div>
+							<div class="login__item">
+								<input type="password" name="password" placeholder="Password" class="login__input" />
+							</div>
+							<button type="submit" class="login__button">Login</button>
+							<a href="#" class="login__registration">Register</a>
+						</form>
+					</div>
 					<picture><source srcset="img/mountains_front.webp" type="image/webp"><img id="mountains_front" src="img/mountains_front.png" alt="" /></picture>
-					<h2 id="text" class="main-block__title">Contacts</h2>
-				</div>
-			</section>
-			<section class="page__contact contact">
-				<div class="contact__container">
-					<h2 class="contact__title">Our Contacts</h2>
-					<div class="contact__text">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est commodi quos at, blanditiis laboriosam corrupti in quibusdam
-							fugit earum adipisci harum cum molestias deleniti, alias doloribus? Nobis et beatae eaque.
-						</p>
-					</div>
-					<div class="contact__icons">
-						<a href="#" class="_icon-instagram"></a>
-						<a href="#" class="_icon-tiktok"></a>
-						<a href="#" class="_icon-youtube"></a>
-					</div>
-					<div class="contact__actions">
-						<a href="" class="contact__button"><span class="_icon-discord"></span>DISCORD</a>
-					</div>
 				</div>
 			</section>
 		</main>

@@ -36,32 +36,27 @@
 		</header>
 
 		<main class="page">
+			<div class="page__blur"></div>
 			<section class="page__main main-block">
 				<div class="main-block__container">
-					<picture><source srcset="img/stars.webp" type="image/webp"><img data-prlx-mouse id="stars" src="img/stars.png" alt="" /></picture>
-					<picture><source srcset="img/moon.webp" type="image/webp"><img id="moon" src="img/moon.png" alt="" /></picture>
-					<picture><source srcset="img/mountains_behind.webp" type="image/webp"><img id="mountains_behind" src="img/mountains_behind.png" alt="" /></picture>
+					<picture><source srcset="img/mountains_behind.webp" type="image/webp"><img class="main-block__blur" id="mountains_behind" src="img/mountains_behind.png" alt="" /></picture>
+					<div class="main-block__admin admin">
+						<h2 class="admin__title">Admin Panel</h2>
+						<h3 class="admin__subtitle">Yo bro you are really cool</h3>
+						<form action="#" class="admin__form">
+							<div class="admin__item">
+								<input type="text" name="name" placeholder="Name" class="admin__input" />
+							</div>
+							<div class="admin__item">
+								<input type="text" name="token" placeholder="Admin-token" class="admin__input" />
+							</div>
+							<div class="admin__item">
+								<input type="password" name="password" placeholder="Password" class="admin__input" />
+							</div>
+							<a href="#" class="admin__login">Login</a>
+						</form>
+					</div>
 					<picture><source srcset="img/mountains_front.webp" type="image/webp"><img id="mountains_front" src="img/mountains_front.png" alt="" /></picture>
-					<h2 id="text" class="main-block__title">Contacts</h2>
-				</div>
-			</section>
-			<section class="page__contact contact">
-				<div class="contact__container">
-					<h2 class="contact__title">Our Contacts</h2>
-					<div class="contact__text">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est commodi quos at, blanditiis laboriosam corrupti in quibusdam
-							fugit earum adipisci harum cum molestias deleniti, alias doloribus? Nobis et beatae eaque.
-						</p>
-					</div>
-					<div class="contact__icons">
-						<a href="#" class="_icon-instagram"></a>
-						<a href="#" class="_icon-tiktok"></a>
-						<a href="#" class="_icon-youtube"></a>
-					</div>
-					<div class="contact__actions">
-						<a href="" class="contact__button"><span class="_icon-discord"></span>DISCORD</a>
-					</div>
 				</div>
 			</section>
 		</main>

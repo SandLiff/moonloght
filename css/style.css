@@ -393,6 +393,21 @@ section img#mountains_front {
   z-index: 10;
 }
 
+.page__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2191dc), to(#75cdde));
+  background: -o-linear-gradient(#2191dc, #75cdde);
+  background: linear-gradient(#2191dc, #75cdde);
+  background-size: cover;
+}
+
 .page__main {
   position: relative;
   width: 100%;
@@ -489,6 +504,38 @@ section img#mountains_front {
   -webkit-transform: translate(0px, -2px);
       -ms-transform: translate(0px, -2px);
           transform: translate(0px, -2px);
+}
+
+.main-block__blur {
+  -webkit-backdrop-filter: blur(28px);
+          backdrop-filter: blur(28px);
+}
+
+.main-block__login {
+  position: relative;
+  z-index: 1500;
+  padding: 1.25rem 4.375rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.61);
+  margin-top: -9.375rem;
+}
+
+.main-block__register {
+  position: relative;
+  z-index: 1500;
+  padding: 1.25rem 4.375rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.61);
+  margin-top: -9.375rem;
+}
+
+.main-block__admin {
+  position: relative;
+  z-index: 1500;
+  padding: 1.25rem 4.375rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.61);
+  margin-top: -9.375rem;
 }
 
 .download__item {
@@ -701,6 +748,205 @@ section img#mountains_front {
 
 ._icon-tiktok:hover {
   color: #160afa;
+}
+
+.login__title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+  text-align: center;
+}
+
+.login__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.875rem;
+}
+
+.login__input {
+  height: 3.125rem;
+  width: 31.25rem;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-transition: width 0.3s ease 0.2s, height 0.3s ease;
+  -o-transition: width 0.3s ease 0.2s, height 0.3s ease;
+  transition: width 0.3s ease 0.2s, height 0.3s ease;
+}
+
+.login__input:hover {
+  width: 37.5rem;
+  height: 3.75rem;
+}
+
+.login__button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 29px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.login__button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.login__registration {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 29px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.login__registration:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.register__title {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+}
+
+.register__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.875rem;
+}
+
+.register__input {
+  height: 3.125rem;
+  width: 31.25rem;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-transition: width 0.3s ease 0.2s, height 0.3s ease;
+  -o-transition: width 0.3s ease 0.2s, height 0.3s ease;
+  transition: width 0.3s ease 0.2s, height 0.3s ease;
+}
+
+.register__input:hover {
+  width: 37.5rem;
+  height: 3.75rem;
+}
+
+.register__button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 29px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.register__button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.register__registration {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 29px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.register__registration:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.admin__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 4.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.admin__subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.admin__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.875rem;
+}
+
+.admin__input {
+  height: 3.125rem;
+  width: 31.25rem;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-transition: width 0.3s ease 0.2s, height 0.3s ease;
+  -o-transition: width 0.3s ease 0.2s, height 0.3s ease;
+  transition: width 0.3s ease 0.2s, height 0.3s ease;
+}
+
+.admin__input:hover {
+  width: 37.5rem;
+  height: 3.75rem;
+}
+
+.admin__login {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 29px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.admin__login:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 @media (max-width: 47.99875em) {

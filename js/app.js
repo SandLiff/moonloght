@@ -322,7 +322,7 @@
                 const paramСoefficientY = el.dataset.prlxCy ? +el.dataset.prlxCy : 100;
                 const directionX = el.hasAttribute("data-prlx-dxr") ? -1 : 1;
                 const directionY = el.hasAttribute("data-prlx-dyr") ? -1 : 1;
-                const paramAnimation = el.dataset.prlxA ? +el.dataset.prlxA : 1;
+                const paramAnimation = el.dataset.prlxA ? +el.dataset.prlxA : 50;
                 let positionX = 0, positionY = 0;
                 let coordXprocent = 0, coordYprocent = 0;
                 setMouseParallaxStyle();
